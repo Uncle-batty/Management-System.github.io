@@ -14,11 +14,9 @@ export const Login = () => {
                     <div className='input-box'>
                         <FaLock /><input type='password' className='input' placeholder='password' required />
                     </div>
-                    <span className="forgot-password"><a href="#">Forgot Password?</a></span>
+                   
                     <input className="login-button" type="submit" value="Sign In" />
-                    <div className='login-link'>
-                        <a href='#'>Already have an account?</a>
-                    </div>
+                    
                 </form>
                 <div className="social-account-container">
                     <span className="title">Or Sign in with</span>
@@ -40,7 +38,7 @@ export const Login = () => {
                         </button>
                     </div>
                 </div>
-                <span className="agreement"><a href="#">Learn user licence agreement</a></span>
+               
             </div>
         </div>
     );
