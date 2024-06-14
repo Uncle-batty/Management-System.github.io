@@ -39,7 +39,7 @@ jobs:
           # Version Spec of the version to use. Examples: 12.x, 10.15.1, >=10.15.0.
           node-version: 20
       - run: npm ci
-      - run: npm run bild
+      - run: npm run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
