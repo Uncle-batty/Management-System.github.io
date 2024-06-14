@@ -1,22 +1,40 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Login.css';
 import { FaRegUser, FaLock } from "react-icons/fa";
+import { supabase } from '../../Services/supabase';
 
 export const Login = () => {
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
+    async function signup(event) {
+        event.preventDefault(); // Prevent the default form submission behavior
+        let { data, error } = await supabase.auth.signUp({
+            email: email,
+            password: password
+        });
+
+        if (error) {
+            console.error('Error signing up:', error.message);
+        } else {
+            console.log('Signup successful:', data);
+        }
+    }
+
     return (
         <div className='main'>
             <div className='container'>
-                <form action='' className='form'>
+                <form className='form' onSubmit={signup}>
                     <h1 className='heading'>Sign up</h1>
                     <div className='input-box'>
-                        <FaRegUser /><input type='text' className='input' placeholder='username' required />
+                        <FaRegUser /><input type='text' className='input' placeholder='username' required
+                            value={email} onChange={(e) => setEmail(e.target.value)} />
                     </div>
                     <div className='input-box'>
-                        <FaLock /><input type='password' className='input' placeholder='password' required />
+                        <FaLock /><input type='password' className='input' placeholder='password' required
+                            value={password} onChange={(e) => setPassword(e.target.value)} />
                     </div>
-                   
-                    <input className="login-button" type="submit" value="Sign In" />
-                    
+                    <input className="login-button" type="submit" value="Sign Up" />
                 </form>
                 <div className="social-account-container">
                     <span className="title">Or Sign in with</span>
@@ -38,7 +56,6 @@ export const Login = () => {
                         </button>
                     </div>
                 </div>
-               
             </div>
         </div>
     );
