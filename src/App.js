@@ -1,11 +1,12 @@
 
 import './App.css';
-import { Login } from './Components/Login/Login';
+
+import Recipe from './Components/Recipe/Recipe';
 
 function App() {
   return (
     <div className="App">
-      <Login />
+      <Recipe />
     </div>
   );
 }

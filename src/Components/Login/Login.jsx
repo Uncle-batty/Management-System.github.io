@@ -38,6 +38,7 @@ export const Login = () => {
             <div className='container'>
                 <form className='form' onSubmit={signup}>
                     <h1 className='heading'>Sign up</h1>
+
                     <div className='input-box'>
                         <FaRegUser /><input type='text' className='input' placeholder='username' required
                             value={email} onChange={(e) => setEmail(e.target.value)} />
