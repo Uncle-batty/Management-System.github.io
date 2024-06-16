@@ -1,0 +1,22 @@
+/* src/Components/NavBar/NavBar.css */
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    background-color: #333;
+    padding: 1rem;
+}
+
+.navbar button {
+    background-color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.navbar button:hover {
+    background-color: #ddd;
+}
+
+.navbar button:focus {
+    outline: none;
+}
