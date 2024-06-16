@@ -3,10 +3,10 @@ import React, { useState } from 'react';
 import './Login.css';
 import { FaRegUser, FaLock } from "react-icons/fa";
 import { supabase } from '../../Services/supabase';
-import { useAuth } from '../../hooks/userAuth';
+//import { useAuth } from '../../hooks/userAuth';
 
 export const Login = () => {
-    const { user } = useAuth(); // Fetch the user state from useAuth hook
+   // const { user } = useAuth(); // Fetch the user state from useAuth hook
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
