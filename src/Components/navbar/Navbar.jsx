@@ -13,6 +13,7 @@ const NavBar = ({ setCurrentPage }) => {
             <button onClick={() => setCurrentPage('Dashboard')}>Dashboard</button>
             <button onClick={() => setCurrentPage('Recipe')}>Recipe</button>
             <button onClick={() => setCurrentPage('Notes')}>Notes</button>
+            <button onClick={() => setCurrentPage('Budget')}>Budget</button>
             <button onClick={handleLogout}>Logout</button>
         </nav>
     );

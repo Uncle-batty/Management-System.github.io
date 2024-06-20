@@ -7,6 +7,7 @@ import { Login } from './Components/Login/Login';
 import Recipe from './Components/Recipe/Recipe';
 import Notes from './Components/NOTES/notes';
 import { Dashboard }  from './Components/Dashboard/Dashboard';
+import Budget from './Components/Budget/Budget';
 
 function App() {
   const { user } = useAuth();
@@ -22,6 +23,8 @@ function App() {
         return <Recipe />;
       case 'Notes':
         return <Notes />;
+      case 'Budget':
+        return <Budget />;
       case 'Dashboard':
       default:
         return <Dashboard />;
