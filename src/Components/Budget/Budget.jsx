@@ -135,7 +135,7 @@ const Budget = () => {
         budgetData.forEach((section) => {
             grandTotal += calculateTotal(section.items);
         });
-        return grandTotal - budgetData[0].items[0].budgeted ;
+        return grandTotal ;
     };
 
     return (
